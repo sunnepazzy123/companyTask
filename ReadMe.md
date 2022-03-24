@@ -4,17 +4,17 @@
 > a User service.
 > a Movie service
 
-## Features
+## Api Features
 
-- User (GET, POST and ID of User)
-- Movie (GET, POST and ID of User)
-- Subscription
+- User (GET, POST, PUT, DELETE of User)
+- Movie (GET, POST of Movie)
+- Subscription (GET, PUT)
 
 ## Usage
 
 ### Env Variables
 
-The .env file is set and ready to be use, the BaseUrl should not be edited.
+The .env file is set and ready to be use, the Base_URL should not be edited.
 
 ```
 PORT = 8888 // Auth service
@@ -33,10 +33,33 @@ cd movie-service && npm install
 ```
 
 ### Run
-
 ```
 # For Development
 npm run start
+
+```
+
+## Auth Api Doc
+```
+GET ~~ http://localhost:8888/api/auth
+GET_ID ~~ http://localhost:8888/api/auth/{id}
+POST ~~ http://localhost:8888/api/auth
+PUT ~~ http://localhost:8888/api/auth/{id}
+DELETE ~~ http://localhost:8888/api/auth/{id}
+POST ~~ http://localhost:8888/api/auth/login
+
+GET_ID ~~ http://localhost:8888/api/auth/subscription
+PUT ~~ http://localhost:8888/api/auth/subscription{id}
+
+```
+
+## Movie Api Doc
+
+```
+GET ~~ http://localhost:8888/api/movie
+GET_ID ~~ http://localhost:8888/api/movie/{id}
+POST ~~ http://localhost:8888/api/movie
+
 ```
 
 ## Docker and K8s Build

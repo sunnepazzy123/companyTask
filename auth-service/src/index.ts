@@ -5,7 +5,7 @@ import connectDb from './config/db';
 
 
 async function main() {
-    console.log("starting uplksdjsd ")
+
     const { PORT, JWT_SECRET } = process.env;
 
     if (!JWT_SECRET) {

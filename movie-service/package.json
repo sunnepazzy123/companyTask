@@ -4,10 +4,10 @@
   "description": "",
   "main": "src/app.ts",
   "scripts": {
-    "test": "jest --watchAll --no-cache --runInBand --detectOpenHandles",
     "start": "ts-node-dev src/index.ts",
     "build": "npm run clean && tsc",
     "clean": "del-cli -f ./dist/*",
+    "test": "jest --watchAll --no-cache --runInBand --detectOpenHandles",
     "test:ci": "jest"
   },
   "jest": {

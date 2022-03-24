@@ -40,11 +40,7 @@ const userSchema = new Schema(
         role: {
             type: String,
             required: true,
-        },
-        movie_limit: {
-            type: Number,
-            default: 0
-        },
+        }
     },
     {
         toJSON: {

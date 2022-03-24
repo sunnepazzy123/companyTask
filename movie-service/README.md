@@ -1,10 +1,10 @@
-# Imoli Recruitment Task
+# NetGuru Recruitment Task
 
 > a movie App platform.
 
 ## Features
 
-- Film (GET and ID of Films)
+- Movies (GET and ID of Movie)
 - Favorite (GET and POST)
 
 ## Usage
@@ -14,8 +14,8 @@
 The .env file is set and ready to be use, the BaseUrl should not be edited.
 
 ```
-PORT = 5000
-BASE_URL = https://swapi.dev/api
+PORT = 8889
+BASE_URL = https://omdbapi.com
 MONGO_URI = your mongodb uri
 
 ```

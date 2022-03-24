@@ -143,3 +143,48 @@ Response
 - Tests quality
 - Database design
 - Technology stack
+
+# Solution for this Task !!!
+
+# NetGuru Recruitment Task
+
+> a User service.
+
+## Features
+
+- User (GET, POST and ID of User)
+- Subscription
+
+## Usage
+
+### Env Variables
+
+The .env file is set and ready to be use, the BaseUrl should not be edited.
+
+```
+PORT = 8888
+BASE_URL = https://omdbapi.com
+MONGO_URI = your mongodb uri
+
+```
+
+### Install Dependencies
+
+```
+npm install
+
+```
+
+### Run
+
+```
+# For Production
+npm run start
+```
+
+## Build
+
+```
+
+```
+

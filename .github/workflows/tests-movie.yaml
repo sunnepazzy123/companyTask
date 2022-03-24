@@ -1,7 +1,9 @@
 name: tests-movie
 
 on:
-  pull_request
+  pull_request:
+    paths:
+      - 'movie-service/**'
   
 jobs:
   build:

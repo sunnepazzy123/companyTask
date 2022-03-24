@@ -14,7 +14,6 @@ export interface IUserDoc extends mongoose.Document {
     username: string;
     password: string;
     role: string;
-    movie_limit: number|null;
 }
 
 const userSchema = new Schema(

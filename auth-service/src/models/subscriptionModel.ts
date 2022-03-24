@@ -4,7 +4,6 @@ import mongoose, { Schema } from 'mongoose';
 
 export interface ISubscriptionDoc extends mongoose.Document {
     user_id: string,
-    plan: Date,
     limit: string,
 }
 

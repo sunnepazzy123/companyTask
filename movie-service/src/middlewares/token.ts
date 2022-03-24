@@ -1,9 +1,10 @@
+import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { AuthError } from "../error/authError";
+import { HttpError } from "../error/httpError";
 import { IToken } from "../interfaces";
 
 
-export const verifyToken = async (req, res, next) => {
+export const verifyToken = async (req: Request, res: Response, next: NextFunction) => {
     let token: string;
     if (
       req.headers.authorization &&
@@ -12,7 +13,7 @@ export const verifyToken = async (req, res, next) => {
         token = req.headers.authorization.split(' ')[1] 
         const decoded = jwt.verify(token, process.env.JWT_SECRET) as IToken;
         if(!decoded){
-            throw new AuthError("Not authorized, invalid token");
+            throw new HttpError("Not authorized, invalid token", 400);
         }
         req.user = decoded;
         next();      
@@ -20,6 +21,6 @@ export const verifyToken = async (req, res, next) => {
   
     if (!token) {
       res.status(401)
-      throw new AuthError('Not authorized, no token');
+      throw new HttpError('Not authorized, no token', 400);
     }
   }

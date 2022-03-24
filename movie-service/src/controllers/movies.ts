@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Request, Response } from "express"
 import { OmdpApi } from "../api";
-import { AuthError } from "../error/authError";
+import { DatabaseError } from "../error/databaseError";
+import { ISubscriber } from "../interfaces/ISubscriber";
 import MoviesModel from "../model/movieModel";
 import { date_diff_indays } from "../utils/date_differences";
 
@@ -28,9 +29,8 @@ export const create = async(req: Request, res: Response)=>{
     const { title } = req.body;
     const user_id = req.user.userId;
     const result = await OmdpApi.getBySearch(title);
-    if(!result) throw new AuthError('Movie not found');
     const movieFound = await (await MoviesModel.findOne({ title: result.title}));
-    if(movieFound) throw new AuthError('Movie already exist');
+    if(movieFound) throw new DatabaseError('Movie already exist', 400);
 
     if(req.user.role === "premium" && result){
         const movie = {...result, user_id};
@@ -41,10 +41,10 @@ export const create = async(req: Request, res: Response)=>{
 
     if(lastMovie.length > 0){
         const days_differences = date_diff_indays(lastMovie[0].createdAt, new Date);
-        const subscription = await (await axios.get(`${AUTH_SERVICE}/subscription/${user_id}`)).data;
+        const subscription = await (await axios.get(`${AUTH_SERVICE}/subscription/${user_id}`)).data as ISubscriber;
 
-        if(subscription?.limit === 5 && days_differences < 30){
-            throw new AuthError('Limit exceeded');
+        if(subscription.limit === 5 && days_differences < 30){
+            throw new DatabaseError('Limit exceeded', 400);
         }
         if(days_differences >= 30){
             await axios.put(`${AUTH_SERVICE}/subscription/${user_id}`, {limit: 0});     

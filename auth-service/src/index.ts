@@ -2,6 +2,7 @@ import { config } from 'dotenv';
 config();
 import { app } from './app';
 import connectDb from './config/db';
+import logger from './logger/winston';
 
 
 async function main() {
@@ -20,7 +21,7 @@ async function main() {
 
     // Listening for a port
     app.listen(PORT, () => {
-      return console.log(`Server is listening at http://localhost:${PORT}`);
+      return logger.info(`Server is listening at http://localhost:${PORT}`);
     });
 }
-main();
+main().catch((error) => console.error(error));

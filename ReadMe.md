@@ -20,7 +20,14 @@ The .env file is set and ready to be use, the Base_URL should not be edited.
 PORT = 8888 // Auth service
 PORT = 8889 // Movie service
 BASE_URL = https://omdbapi.com
-MONGO_URI = your mongodb uri
+MONGO_URI = your mongodb uri ||  default uri is given
+
+```
+
+### Run Seeder on the Auth Service
+    create a dummy data from the example data given to me
+```
+npm run seed:run
 
 ```
 
@@ -39,7 +46,7 @@ npm run start
 
 ```
 
-## Auth Api Doc
+## Auth Service Api Doc
 ```
 GET ~~ http://localhost:8888/api/auth
 GET_ID ~~ http://localhost:8888/api/auth/{id}
@@ -53,7 +60,7 @@ PUT ~~ http://localhost:8888/api/auth/subscription{id}
 
 ```
 
-## Movie Api Doc
+## Movie Service Api Doc
 
 ```
 GET ~~ http://localhost:8889/api/movie

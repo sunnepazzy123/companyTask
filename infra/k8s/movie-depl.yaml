@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: movie-app-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-app
+  template:
+      metadata:
+        labels:
+          app: movie-app
+      spec:
+        containers:
+          - name: movie-app
+            image: wiredevteam2020/movie-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movie-srv
+spec:
+  selector:
+    app: movie-app
+  ports:
+    - name: movie-app
+      protocol: TCP
+      port: 8889
+      targetPort: 8889

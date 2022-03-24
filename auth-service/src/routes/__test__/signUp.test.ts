@@ -72,5 +72,5 @@ it('it return a 400 with duplicated username', async()=>{
                     username: "sunday-thomas",
                     password: "12345"
             })
-            .expect(400);
+            .expect(404);
 });

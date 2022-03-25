@@ -20,7 +20,6 @@ export const verifyToken = async (req: Request, res: Response, next: NextFunctio
     }
   
     if (!token) {
-      res.status(401)
       throw new HttpError('Not authorized, no token', 400);
     }
   }

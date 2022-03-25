@@ -4,6 +4,7 @@ import { DatabaseError } from '../error/authError';
 import { IUser } from '../interfaces/IUser';
 import UserModel from '../models/userModel';
 import jwt from "jsonwebtoken";
+import SubscriptionModel from '../models/subscriptionModel';
 
 
 
@@ -30,6 +31,8 @@ export const createUser = async (req: Request, res: Response) => {
     if (userExist) throw new DatabaseError("username already exist", 400);
 
     const newUser = await UserModel.create(user);
+    await SubscriptionModel.create({user_id: newUser.id});
+
     // Generate a JWT_TOKEN
     const payload = {
         userId: newUser.id,

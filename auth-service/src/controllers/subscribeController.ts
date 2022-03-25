@@ -9,7 +9,7 @@ export const getSubscribeUser = async (req: Request, res: Response) => {
 }
 
 export const updateSubscribeUser = async (req: Request, res: Response) => {
-    const limit  = req.body.limit as number;
+    const limit  = +req.body.limit as number;
     const sub = await SubscriptionModel.findOne({ user_id: req.params.id });
 
     if (!sub) throw new DatabaseError("Subscriber not found", 400);

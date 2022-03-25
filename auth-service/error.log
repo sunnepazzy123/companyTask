@@ -1,2 +1,4 @@
 {"level":"\u001b[31merror\u001b[39m","message":"User not found","service":"device","timestamp":"2022-03-25 19:42:19"}
 {"level":"\u001b[31merror\u001b[39m","message":"User not found","service":"device","timestamp":"2022-03-25 19:42:31"}
+{"level":"\u001b[31merror\u001b[39m","message":"data and hash arguments required","service":"device","timestamp":"2022-03-25 19:46:10"}
+{"level":"\u001b[31merror\u001b[39m","message":"data and hash arguments required","service":"device","timestamp":"2022-03-25 19:46:23"}

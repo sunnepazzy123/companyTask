@@ -152,8 +152,8 @@ Response
 
 ## API Features
 
-- User (GET, POST and ID)
-- Subscription
+- User (GET, POST, PUT, DELETE)
+- Subscription (GET, PUT)
 
 ## Usage
 

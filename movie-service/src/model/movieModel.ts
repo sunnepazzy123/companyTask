@@ -1,6 +1,14 @@
 import mongoose, { Schema } from 'mongoose';
 import mongoosePaginate from 'mongoose-paginate';
 
+export interface IMovie {
+    title: string,
+    released: Date,
+    genre: string,
+    director: string,
+    user_id: number,
+}
+
 interface IPaginate {
     doc: IMovieDoc[];
     total: number;
@@ -13,12 +21,8 @@ interface IMovieModel extends mongoose.Model<IMovieDoc, IPaginate> {
     paginate(arr: {}, arr2: any): IPaginate;
 }
 
-export interface IMovieDoc extends mongoose.Document {
-    title: string,
-    released: Date,
-    genre: string,
-    director: string,
-    user_id: string,
+
+interface IMovieDoc extends mongoose.Document, IMovie {
     createdAt?: Date
 }
 

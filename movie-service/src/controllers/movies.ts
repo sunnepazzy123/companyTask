@@ -3,7 +3,7 @@ import { Request, Response } from "express"
 import { OmdpApi } from "../api";
 import { DatabaseError } from "../error/databaseError";
 import { ISubscriber } from "../interfaces/ISubscriber";
-import MoviesModel from "../model/movieModel";
+import MoviesModel, { IMovie } from "../model/movieModel";
 import { date_diff_indays } from "../utils/date_differences";
 
 
@@ -26,14 +26,15 @@ export const getId = async(req: Request, res: Response)=>{
 }
 
 export const create = async(req: Request, res: Response)=>{
-    const { title } = req.body;
+    const title  = req.body.title as string;
     const user_id = req.user.userId;
     const result = await OmdpApi.getBySearch(title);
     const movieFound = await (await MoviesModel.findOne({ title: result.title}));
     if(movieFound) throw new DatabaseError('Movie already exist', 400);
 
+    let movie: IMovie
     if(req.user.role === "premium" && result){
-        const movie = {...result, user_id};
+       movie = {...result, user_id};
        const newMovie = await MoviesModel.create(movie)
        return res.status(200).json(newMovie)
     }
@@ -52,7 +53,7 @@ export const create = async(req: Request, res: Response)=>{
 
     }
 
-    const movie = {...result, user_id};
+    movie = {...result, user_id};
     const newMovie = await MoviesModel.create(movie);
     await axios.put(`${AUTH_SERVICE}/subscription/${user_id}`, {limit: 1});
     return res.status(200).json(newMovie);

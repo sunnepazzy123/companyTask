@@ -2,16 +2,16 @@
 
 > a movie App platform.
 
-## Features
+## API Features
 
-- Movies (GET and ID of Movie)
-- Favorite (GET and POST)
+- Movies (GET, POST)
+
 
 ## Usage
 
 ### Env Variables
 
-The .env file is set and ready to be use, the BaseUrl should not be edited.
+The .env file is set and ready to be use, the Base_URL should not be edited.
 
 ```
 PORT = 8889
@@ -31,14 +31,13 @@ npm install
 
 ```
 # For Development
-npm run dev
+npm start
 
 # For Production
-npm run start
+npm run prod
 ```
 
 ## Build
-
 ```
 # Create production build
 npm run build

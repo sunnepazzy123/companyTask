@@ -1,5 +1,5 @@
 {
-  "name": "imoli",
+  "name": "movie-service",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.ts",
@@ -8,7 +8,8 @@
     "build": "npm run clean && tsc",
     "clean": "del-cli -f ./dist/*",
     "test": "jest --watchAll --no-cache --runInBand --detectOpenHandles",
-    "test:ci": "jest"
+    "test:ci": "jest",
+    "prod": "node ./dist/index.js"
   },
   "jest": {
     "preset": "ts-jest",

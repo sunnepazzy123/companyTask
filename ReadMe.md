@@ -14,20 +14,13 @@
 
 ### Env Variables
 
-The .env file is set and ready to be use, the Base_URL should not be edited.
+The .env file is set and ready to be use for each Service, the Base_URL should not be edited.
 
 ```
-PORT = 8888 // Auth service
-PORT = 8889 // Movie service
+PORT = your port || 8888 // Auth service
+PORT = your port || 8889 // Movie service
 BASE_URL = https://omdbapi.com
 MONGO_URI = your mongodb uri ||  default uri is given
-
-```
-
-### Run Seeder on the Auth Service
-    create a dummy data from the example data given to me
-```
-npm run seed:run
 
 ```
 
@@ -38,6 +31,32 @@ cd auth-service && npm install
 cd movie-service && npm install
 
 ```
+
+### Run Seeder on the Auth Service
+    create a dummy data from the example data given to me
+```
+npm run seed:run
+
+```
+
+## Users
+
+The auth service defines two user accounts that you should use after running seed command
+
+1. `Basic` user
+
+```
+ username: 'basic-thomas'
+ password: '12345'
+```
+
+1. `Premium` user
+
+```
+username: 'premium-jim'
+password: '12345'
+```
+
 
 ### Run
 ```

@@ -68,3 +68,73 @@
 [34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:11:25"}
 [34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:11:37"}
 [34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:11:37"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:36:11"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:36:11"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:43:06"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:43:06"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:44:23"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:44:23"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:45:37"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:45:37"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:45:42"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:45:42"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:46:14"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:46:14"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:46:17"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:46:17"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:46:23"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:46:23"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:47:42"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:47:42"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:47:48"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:47:48"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:47:57"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:47:57"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:48:08"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:48:08"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:52:50"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:52:50"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:52:54"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:52:54"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:53:29"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:53:29"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:54:27"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:54:27"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:54:30"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:54:30"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:55:15"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:55:15"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:55:24"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:55:24"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:55:33"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:55:33"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:55:42"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:55:42"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:56:07"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:56:07"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:56:10"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:56:10"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:56:27"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:56:27"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:56:37"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:56:37"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:57:05"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:57:05"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:57:16"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:57:16"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:57:20"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:57:20"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:57:35"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:57:35"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:58:01"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:58:01"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:59:33"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:59:33"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:59:36"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:59:36"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 20:59:51"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 20:59:51"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 21:00:03"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 21:00:03"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 21:00:08"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-25 21:00:08"}

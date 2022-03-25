@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { HttpError } from "../error/httpError";
+import { IToken } from "../interfaces/Itoken";
 import UserModel from "../models/userModel";
 
 
@@ -11,11 +12,13 @@ export const verifyToken = async (req: Request, res: Response, next: NextFunctio
     req.headers.authorization.startsWith('Bearer')
   ) {
     token = req.headers.authorization.split(' ')[1]
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET) as IToken;
     if (!decoded) {
       throw new HttpError('Not authorized, invalid token', 400);
     }
-    req.user = await UserModel.findById(decoded.id).select('-password');
+    //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    req.user = decoded;
     next();
   }
 

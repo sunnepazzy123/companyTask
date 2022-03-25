@@ -11,11 +11,7 @@ const AUTH_SERVICE = process.env.AUTH_SERVICE || 'http://localhost:8888/api/auth
 
 
 export const get = async(req: Request, res: Response)=>{
-    const options = {
-             page: +req.query.page || 1,
-             limit: +req.query.limit || 10,
-         };
-    const movies = await MoviesModel.paginate({}, options);
+    const movies = await MoviesModel.find({user_id: req.user.userId});
     return res.status(200).json(movies);
 }
 

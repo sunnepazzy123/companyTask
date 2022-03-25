@@ -47,6 +47,7 @@ const userSchema = new Schema(
             transform(docs, ret){
                 delete ret.__v;
                 delete ret._id;
+                delete ret.password
             }
         }
     }

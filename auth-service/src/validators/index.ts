@@ -1,6 +1,6 @@
 import { body } from 'express-validator';
 
-export const userValidator = [
+export const registerValidator = [
     body('username')
         .trim()
         .isLength({min: 4, max: 20})
@@ -21,6 +21,17 @@ export const userValidator = [
         .trim()
         .isLength({min: 4, max: 20})
         .withMessage('Name must be between 4 and 20 characters')
+];
+
+export const loginValidator = [
+    body('username')
+        .trim()
+        .isLength({min: 4, max: 20})
+        .withMessage('Username must be between 4 and 20 characters'),
+    body('password')
+        .trim()
+        .isLength({min: 4, max: 20})
+        .withMessage('Password must be between 4 and 20 characters'),
 ];
 
 export const subscriberValidator = [

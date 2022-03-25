@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 
 
 export const getUsers = async (req: Request, res: Response) => {
-    const users = await UserModel.find({});
+    const users = await UserModel.find({}).select('-password');
     return res.status(200).json(users);
 }
 

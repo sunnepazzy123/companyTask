@@ -401,3 +401,7 @@
 [34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-25 19:09:03"}
 [34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 19:09:09"}
 [34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-25 19:09:10"}
+[31merror[39m: User not found {"service":"device","timestamp":"2022-03-25 19:42:19"}
+[31merror[39m: User not found {"service":"device","timestamp":"2022-03-25 19:42:31"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-25 19:43:38"}
+[34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-25 19:43:38"}

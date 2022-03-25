@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { HttpError } from "../error/httpError";
 import { IToken } from "../interfaces/Itoken";
-import UserModel from "../models/userModel";
 
 
 export const verifyToken = async (req: Request, res: Response, next: NextFunction) => {
@@ -17,7 +16,6 @@ export const verifyToken = async (req: Request, res: Response, next: NextFunctio
       throw new HttpError('Not authorized, invalid token', 400);
     }
     //@ts-ignore
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
     req.user = decoded;
     next();
   }

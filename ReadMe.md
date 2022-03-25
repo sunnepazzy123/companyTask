@@ -67,6 +67,8 @@ npm run start
 
 ## Auth Service Api Doc
 ```
+    Remember jwtToken is created when you login and it is required when you make request just as instructed
+
 GET ~~ http://localhost:8888/api/auth
 GET_ID ~~ http://localhost:8888/api/auth/{id}
 POST ~~ http://localhost:8888/api/auth

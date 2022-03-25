@@ -1,7 +1,7 @@
 
 import SubscriptionModel from '../models/subscriptionModel';
 import { Request, Response } from 'express';
-import { DatabaseError } from '../error/databaseError';
+import { DatabaseError } from '../error/authError';
 
 export const getSubscribeUser = async (req: Request, res: Response) => {
     const subUser = await SubscriptionModel.findOne({ user_id: req.params.id });
@@ -9,7 +9,7 @@ export const getSubscribeUser = async (req: Request, res: Response) => {
 }
 
 export const updateSubscribeUser = async (req: Request, res: Response) => {
-    const { limit } = req.body;
+    const limit  = req.body.limit as number;
     const sub = await SubscriptionModel.findOne({ user_id: req.params.id });
 
     if (!sub) throw new DatabaseError("Subscriber not found", 400);
@@ -18,6 +18,6 @@ export const updateSubscribeUser = async (req: Request, res: Response) => {
     }
 
     sub.limit += limit
-    const result = await sub.save();
-    return res.status(200).json(result);
+    const subUpdate = await sub.save();
+    return res.status(200).json(subUpdate);
 }

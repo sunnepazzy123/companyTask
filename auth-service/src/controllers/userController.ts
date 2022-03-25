@@ -1,9 +1,10 @@
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
-import { DatabaseError } from '../error/databaseError';
+import { DatabaseError } from '../error/authError';
 import { IUser } from '../interfaces/IUser';
 import UserModel from '../models/userModel';
 import jwt from "jsonwebtoken";
+
 
 
 export const getUsers = async (req: Request, res: Response) => {
@@ -21,9 +22,9 @@ export const getUser = async (req: Request, res: Response) => {
 
 export const createUser = async (req: Request, res: Response) => {
     const errors = validationResult(req);
-    if (!errors.isEmpty()) return res.status(400).send(errors.array());
+    if (!errors.isEmpty()) return res.status(400).json(errors.array());
 
-    const user = req.body as IUser
+    const user = req.body as IUser;
     const userExist = await UserModel.findOne({ username: user.username });
 
     if (userExist) throw new DatabaseError("username already exist", 400);
@@ -52,8 +53,6 @@ export const updateUser = async (req: Request, res: Response) => {
 
     if (!user) throw new DatabaseError('User not found', 400);
 
-
-    user.id = req.body.id || user.id
     user.name = req.body.name || user.name
     user.username = req.body.username || user.username
     user.password = req.body.password || user.password
@@ -84,12 +83,17 @@ export const deleteUser = async (req: Request, res: Response) => {
 
 export const loginUser = async (req: Request, res: Response) => {
     const { username, password } = req.body as IUser;
+    
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) return res.status(400).json(errors.array());
 
     const user = await UserModel.findOne({ username });
 
     if (!user) throw new DatabaseError("Invalid Credentials", 400);
-    //@ts-ignore
-    if (!(await user.matchPassword(password))) throw new DatabaseError("Invalid Credentials", 400);
+    // @ts-expect-error: Unreachable code error
+    if (!(await user.matchPassword(password))) {
+        throw new DatabaseError("Invalid Credentials", 400);
+    }
 
     // Generate a JWT_TOKEN
     const payload = {

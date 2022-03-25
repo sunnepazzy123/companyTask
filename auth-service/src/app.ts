@@ -1,14 +1,15 @@
 import express, { Request, Response, NextFunction } from 'express';
 const app = express();
 import swaggerUI from 'swagger-ui-express';
-import { specs } from './swagger';
+import swaggerJsDoc from 'swagger-jsdoc';
+import swaggerDocument from './swagger/swagger.json';
 import cookieSession from 'cookie-session';
 import userRoutes from './routes';
-import { DatabaseError } from './error/databaseError';
-import { HttpError } from './error/httpError';
+import { errorHandler, IError} from './error/errorHandler';
+const apiSpecDoc = swaggerJsDoc(swaggerDocument);
 
-type IError = DatabaseError | HttpError;
-app.set('trust proxy', 1); //to make sure express is aware of proxy of ingress-nginx
+
+app.set('trust proxy', true); //to make sure express is aware of proxy of ingress-nginx
 
 
 // middlewares setups
@@ -20,14 +21,13 @@ app.use(
         secure: false
     })
 );
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(apiSpecDoc));
 app.use('/api', userRoutes);
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs));
+
 // Global Error Handler
-app.use((err: IError, req: Request, res: Response, next: NextFunction)=>{
-    if(err.statusCode === 400){
-         return res.status(400).json({message: err.message, data: null, path: req.path, method: req.method});
-    }
-    return res.status(404).json({message: err.message, data: null, path: req.path, method: req.method});
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((err: IError, req: Request, res: Response, _next: NextFunction)=>{
+    errorHandler(err, req, res);
 });
 
 export { app }

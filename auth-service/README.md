@@ -150,21 +150,21 @@ Response
 
 > a User service.
 
-## Features
+## API Features
 
-- User (GET, POST and ID of User)
+- User (GET, POST and ID)
 - Subscription
 
 ## Usage
 
 ### Env Variables
 
-The .env file is set and ready to be use, the BaseUrl should not be edited.
+The .env file is set and ready to be use, the BASE_URL should not be edited.
 
 ```
 PORT = 8888
 BASE_URL = https://omdbapi.com
-MONGO_URI = your mongodb uri
+MONGO_URI = your mongodb uri || default uri
 
 ```
 
@@ -178,13 +178,17 @@ npm install
 ### Run
 
 ```
-# For Production
+# For Development
 npm run start
+
+# For Production
+npm run prod
+
 ```
 
 ## Build
 
 ```
-
+npm run build
 ```
 

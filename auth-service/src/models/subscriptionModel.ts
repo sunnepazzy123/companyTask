@@ -3,8 +3,8 @@ import mongoose, { Schema } from 'mongoose';
 
 
 export interface ISubscriptionDoc extends mongoose.Document {
-    user_id: string,
-    limit: string,
+    user_id: number,
+    limit: number,
 }
 
 

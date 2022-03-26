@@ -152,7 +152,7 @@ I only have little time for this but the test suite is working fine for the test
 
     Note: Kubernetes need to be install as a tool inside your docker before this set of command will work,
     There will be an issue with creating an image because my DockerId is included in this workflow, Kindly 
-    run each service manually with building an image if you can from the endpoint i gave you from above.. ):
+    run each service manually without building an image if you can from the endpoint i gave you from above.. ):
     Thanks for understanding.
     
 ```
@@ -171,6 +171,12 @@ I only have little time for this but the test suite is working fine for the test
 
     i have little time for this task and i was unable to complete the swagger UI Docs and swagger api,
     it was done half way... 
+
+```
+
+## The Summary of Option 1 && 2
+```
+I can also explain all this, and please i will like to hear a feedback toward this...
 
 ```
  

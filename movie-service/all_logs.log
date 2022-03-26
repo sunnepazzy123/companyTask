@@ -142,3 +142,8 @@
 [34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-26 10:23:55"}
 [34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-26 10:35:59"}
 [34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-26 10:35:59"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-26 10:36:25"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-03-26 10:36:25"}
+[31merror[39m: Title:  not found {"service":"device","timestamp":"2022-03-26 10:36:31"}
+[31merror[39m: Movie already exist {"service":"device","timestamp":"2022-03-26 10:40:02"}
+[31merror[39m: Limit exceeded {"service":"device","timestamp":"2022-03-26 10:40:51"}

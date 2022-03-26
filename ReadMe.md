@@ -77,7 +77,7 @@ DELETE ~~ http://localhost:8888/api/auth/{id}
 POST ~~ http://localhost:8888/api/auth/login
 
 GET_ID ~~ http://localhost:8888/api/auth/subscription
-PUT ~~ http://localhost:8888/api/auth/subscription{id}
+PUT ~~ http://localhost:8888/api/auth/subscription/{id}
 
 ```
 
@@ -90,19 +90,44 @@ POST ~~ http://localhost:8889/api/movie
 
 ```
 
-## Docker and K8s Build
+## Docker and K8s Instructions
 ```
-    The Infra folder contain the deployment config file for each service
+    The Infra folder contain all the kubernetes config files for each service
     The skaffold.yaml file allow you to push code automatically withing this workflow.
+   
+```
+## Create a Kubernetes Service for each Deployment
+```
+    cd into the infra folder, that is where the deployments for each service reside.
 
-    cd into the infra folder, that is where the deployment for each service reside.
+    In your Terminal inside the Infra Folder:
+    -> kubectl apply -f mandatory.yaml    // this will provision a load balancer service outside our cluster
+    -> kubectl apply -f loadBalancer.yaml // this will create load balancer with ingressNginx within our cluster
+    -> kubectl apply -f ingress-srv.yaml // this will create a routing rules for ingressNginx
+    -> kubectl apply -f auth-depl.yaml // this will create a deployment & service for Auth Service
+    -> kubectl apply -f movie-depl.yaml // this will create a deployment & service for Movie Service
+
+    Note: Kubernetes need to be install as a tool inside your docker before this set of command will work,
+    There will be an issue with creating an image because my DockerId is included in this workflow, Kindly 
+    run each service manually with building an image if you can from the endpoint i gave you from above.. ):
+    Thanks for understanding.
+    
+```
+## Steps to Build an Image
+```
+    cd auth-service && run docker build -t <dockerId/NameOfImage> .
+    cd movie-service && run docker build -t <dockerId/NameOfImage> .
+```
+```
+    cd auth-service && run docker build -t <dockerId/NameOfImage> .
+    cd movie-service && run docker build -t <dockerId/NameOfImage> .
 ```
 ## Swagger UI Api
 ```
     http://localhost:8889/api-docs
 
     i have little time for this task and i was unable to complete the swagger UI Docs and swagger api,
-    it was done half way
+    it was done half way... 
 
 ```
  

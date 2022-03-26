@@ -4,9 +4,7 @@ import { IUser } from '../interfaces/IUser';
 import { NextFunction } from 'express';
 import { hashPassword } from '../utils/bCrypts';
 
-interface IUserModel extends mongoose.Model<IUserDoc> {
-    matchPassword(password: string): boolean
-}
+interface IUserModel extends mongoose.Model<IUserDoc> {}
 
 export interface IUserDoc extends mongoose.Document {
     id: number;
@@ -57,22 +55,22 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password)
   }
   
-  userSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) {
-      next();
-    } 
-    this.password = await hashPassword(this.password);
-  });
+userSchema.pre('save', async function (next) {
+if (!this.isModified('password')) {
+    next();
+} 
+this.password = await hashPassword(this.password);
+});
 
-  userSchema.pre('insertMany', async function (next: NextFunction, docs: IUser[]) {
-      if (Array.isArray(docs) && docs.length) {
-        const promisesDocs = docs.map(async(doc)=>{
-            doc.password = await hashPassword(doc.password);
-            return doc; });
-            
-      await Promise.all(promisesDocs);
-    } 
-  });
+userSchema.pre('insertMany', async function (next: NextFunction, docs: IUser[]) {
+    if (Array.isArray(docs) && docs.length) {
+    const promisesDocs = docs.map(async(doc)=>{
+        doc.password = await hashPassword(doc.password);
+        return doc; });
+        
+    await Promise.all(promisesDocs);
+} 
+});
   
 
 const UserModel = mongoose.model<IUserDoc, IUserModel>('users', userSchema);

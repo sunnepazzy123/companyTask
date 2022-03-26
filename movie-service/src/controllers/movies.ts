@@ -29,12 +29,12 @@ export const create = async(req: Request, res: Response)=>{
     if(movieFound) throw new DatabaseError('Movie already exist', 400);
 
     let movie: IMovie
-    if(req.user.role === "premium" && result){
+    if(req.user.role === "premium"){
        movie = {...result, user_id};
        const newMovie = await MoviesModel.create(movie)
        return res.status(200).json(newMovie)
     }
-    const lastMovie = await MoviesModel.find({id: user_id}).sort({_id: -1}).limit(1);
+    const lastMovie = await MoviesModel.find({user_id}).sort({_id: -1}).limit(1);
 
     if(lastMovie.length > 0){
         const days_differences = date_diff_indays(lastMovie[0].createdAt, new Date);

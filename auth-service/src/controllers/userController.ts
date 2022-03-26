@@ -9,7 +9,7 @@ import SubscriptionModel from '../models/subscriptionModel';
 
 
 export const getUsers = async (req: Request, res: Response) => {
-    const users = await UserModel.find({}).select('-password');
+    const users = await UserModel.find({});
     return res.status(200).json(users);
 }
 

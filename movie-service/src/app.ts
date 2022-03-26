@@ -6,6 +6,7 @@ import { specs } from './swagger';
 import moviesRoutes from './routes';
 import { HttpError } from './error/httpError';
 import { DatabaseError } from './error/databaseError';
+import { errorHandler } from './error/error';
 
 type IError = DatabaseError | HttpError;
 
@@ -15,11 +16,7 @@ app.use('/api', moviesRoutes);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs)); 
 //Global Error Handler
 app.use((err: IError, req: Request, res: Response, _next: NextFunction)=>{
-
-    if(err.statusCode === 400 || err.statusCode != 404){
-       return res.status(404).json({message: err.message, data: null, path: req.path, method: req.method});
-    }
-    return res.status(500).json({message: err.message, data: null, path: req.path, method: req.method});
+    errorHandler(err, req, res);
 });
 
 export { app }

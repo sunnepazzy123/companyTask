@@ -1,5 +1,6 @@
 
-# NetGuru Recruitment Task
+# NetGuru Recruitment Task: 
+I redefined all this services from crash...
 
 > a User service.
 > a Movie service.
@@ -12,6 +13,13 @@
 
 ## Usage
 
+### Application Stack
+
+```
+MongoDB // Database,
+ExpressJs // ServerSide Framework built on Node
+
+```
 ### Env Variables
 
 The .env file is set and ready to be use for each Service, the Base_URL should not be edited.
@@ -32,6 +40,7 @@ cd movie-service && npm install
 
 ```
 
+
 ### Run Seeder on the Auth Service
     create a dummy data from the example data given to me
 ```
@@ -39,7 +48,7 @@ npm run seed:run
 
 ```
 
-## Users
+## Users Service
 
 The auth service defines two user accounts that you should use after running seed command
 
@@ -56,9 +65,22 @@ The auth service defines two user accounts that you should use after running see
 username: 'premium-jim'
 password: '12345'
 ```
+## Movie Service
+
+you need to be authenticated before you can used this endpoint, token is required in the header
+
+1. `Create a movie`
+
+```
+    {title: "Prison Break"}
+```
 
 
-### Run
+# Note:
+you can create your own user or movie...The swagger Api Doc is not complete for now... ):
+
+
+### Run each services
 ```
 # For Development
 npm run start

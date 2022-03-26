@@ -112,6 +112,20 @@ POST ~~ http://localhost:8889/api/movie
 
 ```
 
+## Test EndPoint using Headless Browser
+```
+e.g Postman
+
+```
+
+## Testing using Jest
+```
+    suite environment for jest 
+   -> cd auth-service && npm run test
+
+I only have little time for this but the test suite is working fine for the test cases...
+```
+
 ## Docker and K8s Instructions
 ```
     The Infra folder contain all the kubernetes config files for each service

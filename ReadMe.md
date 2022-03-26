@@ -1,9 +1,16 @@
 
 # NetGuru Recruitment Task: 
-I redefined all this services from crash...
+ I redefined all this services from scratch...
 
 > a User service.
 > a Movie service.
+
+Note: 
+ ```
+    Subscription Service was not included so i had to use Subscription Model in the Auth-Service 
+    which is not a good approach in a MicroService Arch Design..
+
+ ```
 
 ## Api Features
 

@@ -137,7 +137,9 @@ I only have little time for this but the test suite is working fine for the test
 ## CI && CD pipeline
 ```
 i use Github Action..
-    test.yml file for each service
+    i created a sample PR and run a test on pipeline and it build successfully, 
+    you can check the test.yml file for each service
+
 ```
 
 ## Docker and K8s Instructions
@@ -153,12 +155,10 @@ i use Github Action..
     Enter this commands in your Terminal from the Infra/K8s Folder:
     -> kubectl apply -f mandatory.yaml    // this will provision a load balancer service outside our cluster
     -> kubectl apply -f loadBalancer.yaml // this will create load balancer with ingressNginx within our cluster
-    -> kubectl apply -f ingress-srv.yaml // this will create a routing rules for ingressNginx
     -> kubectl apply -f auth-depl.yaml // this will create a deployment & service for Auth Service
     -> kubectl apply -f movie-depl.yaml // this will create a deployment & service for Movie Service
     -> kubectl apply -f auth-mongo-depl.yaml // this will create a deployment & service for Auth DB Service
     -> kubectl apply -f movie-mongo-depl.yaml // this will create a deployment & service for Movie DB Service
-
 
 
     Note: Kubernetes need to be install as a tool inside your docker before this set of command will work,
@@ -167,6 +167,20 @@ i use Github Action..
     Thanks for understanding.
     
 ```
+## Dockerizing API
+    ```
+    cd into the infra folder, that is where the deployments for each service reside.
+    -> kubectl apply -f ingress-srv.yaml // this will create a routing rules for ingressNginx
+    ```
+
+### Run Seeder on the Auth Service
+    create a dummy data from the example data given to me
+```
+npm run seed:run
+
+```
+
+
 ## Steps to Build an Image
 ```
     cd auth-service && run docker build -t <dockerId/NameOfImage> .

@@ -40,7 +40,7 @@ export const create = async(req: Request, res: Response)=>{
         const days_differences = date_diff_indays(lastMovie[0].createdAt, new Date);
         const subscription = await (await axios.get(`${AUTH_SERVICE}/api/auth/subscription/${user_id}`)).data as ISubscriber;
 
-        if(subscription.limit === 5 && days_differences < 30){
+        if(subscription.limit >= 5 && days_differences < 30){
             throw new DatabaseError('Limit exceeded', 400);
         }
         if(days_differences >= 30){

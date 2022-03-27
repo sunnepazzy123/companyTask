@@ -2,3 +2,12 @@
 {"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-03-26 10:40:02"}
 {"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-26 10:40:51"}
 {"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-26 14:58:53"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-27 23:50:05"}
+{"level":"\u001b[31merror\u001b[39m","message":"Title: vemwd not found","service":"device","timestamp":"2022-03-27 23:58:21"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-03-27 23:59:14"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-03-28 00:03:40"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-03-28 00:04:55"}
+{"level":"\u001b[31merror\u001b[39m","message":"movies validation failed: released: Cast to date failed for value \"N/A\" (type string) at path \"released\"","service":"device","timestamp":"2022-03-28 00:10:46"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:11:05"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:15:49"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:16:37"}

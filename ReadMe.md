@@ -1,5 +1,6 @@
 
 # NetGuru Recruitment Task: 
+    
  I redefined all this services from scratch...
 
 > a User service.
@@ -8,7 +9,7 @@
 Note: 
  ```
     Subscription Service was not included so i had to use Subscription Model in the Auth-Service 
-    which is not a good approach in a MicroService Arch Design..
+    which is not a good approach in a MicroService Design Architechure..
 
  ```
 
@@ -133,6 +134,12 @@ e.g Postman
 I only have little time for this but the test suite is working fine for the test cases...
 ```
 
+## CI && CD pipeline
+```
+i use Github Action..
+    test.yml file for each service
+```
+
 ## Docker and K8s Instructions
 ```
     The Infra folder contain all the kubernetes config files for each service
@@ -143,12 +150,16 @@ I only have little time for this but the test suite is working fine for the test
 ```
     cd into the infra folder, that is where the deployments for each service reside.
 
-    In your Terminal inside the Infra Folder:
+    Enter this commands in your Terminal from the Infra/K8s Folder:
     -> kubectl apply -f mandatory.yaml    // this will provision a load balancer service outside our cluster
     -> kubectl apply -f loadBalancer.yaml // this will create load balancer with ingressNginx within our cluster
     -> kubectl apply -f ingress-srv.yaml // this will create a routing rules for ingressNginx
     -> kubectl apply -f auth-depl.yaml // this will create a deployment & service for Auth Service
     -> kubectl apply -f movie-depl.yaml // this will create a deployment & service for Movie Service
+    -> kubectl apply -f auth-mongo-depl.yaml // this will create a deployment & service for Auth DB Service
+    -> kubectl apply -f movie-mongo-depl.yaml // this will create a deployment & service for Movie DB Service
+
+
 
     Note: Kubernetes need to be install as a tool inside your docker before this set of command will work,
     There will be an issue with creating an image because my DockerId is included in this workflow, Kindly 
@@ -167,7 +178,7 @@ I only have little time for this but the test suite is working fine for the test
 ```
 ## Swagger UI Api
 ```
-    http://localhost:8889/api-docs
+    http://localhost:8888/api-docs
 
     i have little time for this task and i was unable to complete the swagger UI Docs and swagger api,
     it was done half way... 
@@ -177,6 +188,7 @@ I only have little time for this but the test suite is working fine for the test
 ## The Summary of Option 1 && 2
 ```
 I can also explain all this, and please i will like to hear a feedback toward this...
+
 
 ```
  

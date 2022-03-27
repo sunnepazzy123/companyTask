@@ -7,7 +7,7 @@ import MoviesModel, { IMovie } from "../model/movieModel";
 import { date_diff_indays } from "../utils/date_differences";
 
 
-const AUTH_SERVICE = process.env.AUTH_SERVICE || 'http://localhost:8888/api/auth';
+const AUTH_SERVICE = process.env.AUTH_SERVICE || 'http://localhost:8888';
 
 
 export const get = async(req: Request, res: Response)=>{
@@ -38,19 +38,19 @@ export const create = async(req: Request, res: Response)=>{
 
     if(lastMovie.length > 0){
         const days_differences = date_diff_indays(lastMovie[0].createdAt, new Date);
-        const subscription = await (await axios.get(`${AUTH_SERVICE}/subscription/${user_id}`)).data as ISubscriber;
+        const subscription = await (await axios.get(`${AUTH_SERVICE}/api/auth/subscription/${user_id}`)).data as ISubscriber;
 
         if(subscription.limit === 5 && days_differences < 30){
             throw new DatabaseError('Limit exceeded', 400);
         }
         if(days_differences >= 30){
-            await axios.put(`${AUTH_SERVICE}/subscription/${user_id}`, {limit: 0});     
+            await axios.put(`${AUTH_SERVICE}/api/auth/subscription/${user_id}`, {limit: 0});     
         }
 
     }
 
     movie = {...result, user_id};
     const newMovie = await MoviesModel.create(movie);
-    await axios.put(`${AUTH_SERVICE}/subscription/${user_id}`, {limit: 1});
+    await axios.put(`${AUTH_SERVICE}/api/auth/subscription/${user_id}`, {limit: 1});
     return res.status(200).json(newMovie);
 }

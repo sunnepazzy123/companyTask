@@ -471,3 +471,7 @@
 [34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-26 10:19:46"}
 [34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-26 10:19:50"}
 [34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-26 10:19:50"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-26 14:58:33"}
+[34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-26 14:58:33"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-03-27 22:43:26"}
+[34minfo[39m: Server is listening at http://localhost:8888 {"service":"device","timestamp":"2022-03-27 22:43:26"}

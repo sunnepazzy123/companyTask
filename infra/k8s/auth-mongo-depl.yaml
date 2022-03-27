@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: auth-app-mongo-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-app-mongo
+  template:
+      metadata:
+        labels:
+          app: auth-app-mongo
+      spec:
+        containers:
+          - name: auth-app-mongo
+            image: wiredevteam2020/mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-app-mongo-srv
+spec:
+  selector:
+    app: auth-app-mongo
+  ports:
+    - name: auth-app-db
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+  

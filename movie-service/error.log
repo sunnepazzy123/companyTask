@@ -1,0 +1,4 @@
+{"level":"\u001b[31merror\u001b[39m","message":"Title:  not found","service":"device","timestamp":"2022-03-26 10:36:31"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-03-26 10:40:02"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-26 10:40:51"}
+{"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-26 14:58:53"}

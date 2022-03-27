@@ -10,7 +10,7 @@ spec:
     - host: netgurumovie.com
       http:
         paths:
-          - path: "/api/users?(.*)"
+          - path: "/api/auth?(.*)"
             backend:
               serviceName:  auth-srv
               servicePort: 8888

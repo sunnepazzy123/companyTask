@@ -169,7 +169,7 @@ i use Github Action..
 ```
 ## Dockerizing API
     ```
-    cd into the infra folder, that is where the deployments for each service reside.
+    cd into the infra folder, you can see how i dockerize the scheme for this api
     -> kubectl apply -f ingress-srv.yaml // this will create a routing rules for ingressNginx
     ```
 

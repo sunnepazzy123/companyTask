@@ -19,7 +19,6 @@ const importData = async () => {
         });
         const result = await Promise.allSettled(promises);
         logger.info('new users created => ', result);     
-        process.exit(1);
     } catch (error) {
         logger.error('Error occur!');
         process.exit(1);

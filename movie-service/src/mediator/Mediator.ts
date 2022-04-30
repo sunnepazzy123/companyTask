@@ -1,11 +1,11 @@
 
-import { IComponent, IComponentType, IService } from "./interface";
+import { IComponent, IComponentType, IModel} from "./interface";
 import { Service } from "./Service";
 
 export class Mediator extends Service {
     static _instance: Mediator = undefined
     constructor (
-        private components: IComponent<IComponentType<any>>[] = [], 
+        private components: IComponent<IComponentType<IModel>>[] = [], 
         ) {
         super();
     }
@@ -18,14 +18,14 @@ export class Mediator extends Service {
         return this._instance
     }
 
-    add(component: IComponent<IComponentType<any>>) {
+    register(component: IComponent<IComponentType<IModel>>) {
         this.components.push(component)
     };
 
-    notify(msg: IComponentType<any>, _component: IComponent<IComponentType<any>>){
+    publish(msg: IComponentType<IModel>, _component: IComponent<IComponentType<IModel>>){
         for(const component of this.components){
             if(component != _component){
-                component.recieve(msg)
+                component.subscribe(msg)
             }
         }
     };

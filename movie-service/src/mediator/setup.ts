@@ -7,8 +7,8 @@ export const authComponent = new Component(mediator, "authComponent")
 
 
 export const mediatorSetup = () => {
-    mediator.add(authComponent)
-    mediator.add(appComponent)
+    mediator.register(authComponent)
+    mediator.register(appComponent)
 }
 
 

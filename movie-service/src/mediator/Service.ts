@@ -1,20 +1,20 @@
-import { IComponentType, IService } from "./interface";
+import { IModel, IService } from "./interface";
 
 
-export class Service implements IService<IComponentType<any>> {
-    convert_csv_toJSON  (data: IComponentType<any>) {
+export class Service implements IService<IModel> {
+    convert_csv_toJSON  (data: IModel) {
         console.log("convert csv to json successful ", data)
 
     };
-    convert_json_toCSV (data: IComponentType<any>) {
+    convert_json_toCSV (data: IModel) {
         console.log("convert json to csv successful ", data)
     };
 
-    send_mail(data: IComponentType<any>) {
+    send_mail(data: IModel) {
         console.log("sending mail is sent successfully ", data)
     }
 
-    send_sms(data: IComponentType<any>) {
+    send_sms(data: IModel) {
         console.log("sending sms is sent successfully ", data)
     }
 

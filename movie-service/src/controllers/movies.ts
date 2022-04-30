@@ -16,7 +16,7 @@ const AUTH_SERVICE = process.env.AUTH_SERVICE || 'http://localhost:8888';
 export const get = async (req: Request, res: Response) => {
     const user_id = +req.user.userId;
     const movies = await Orm.Movies.get(user_id);
-    component.notify({ type: "get", data: movies })
+    component.publish({ type: "get", data: movies })
     return res.status(200).json(movies);
 }
 
@@ -43,7 +43,7 @@ export const create = async (req: Request, res: Response) => {
     if (req.user.role === "premium") {
         movie = { ...result, user_id };
         const newMovie = await Orm.Movies.create(movie);
-        component.notify({ type: "create", data: newMovie })
+        component.publish({ type: "create", data: newMovie })
         return res.status(200).json(newMovie)
     }
     const lastMovie = await MoviesModel.find({ user_id }).sort({ _id: -1 }).limit(1);
@@ -65,7 +65,7 @@ export const create = async (req: Request, res: Response) => {
 
     movie = { ...result, user_id };
     const newMovie = await Orm.Movies.create(movie);
-    component.notify({ type: "create", data: newMovie })
+    component.publish({ type: "create", data: newMovie })
     await axios.put(`${AUTH_SERVICE}/api/auth/subscription/${user_id}`, { limit: 1 });
     return res.status(200).json(newMovie);
 }

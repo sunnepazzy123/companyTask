@@ -1,30 +1,32 @@
 
 import logger from "../logger/winston";
-import { IComponent, IComponentType } from "./interface";
+import { IComponent, IComponentType, IModel } from "./interface";
 import { Mediator } from "./Mediator";
 
-export class Component implements IComponent<IComponentType<any>>{
+
+
+export class Component implements IComponent<IComponentType<IModel>>{
     
     constructor(private mediator: Mediator, private name: string){}
 
-    notify(msg: IComponentType<any>) {
+    publish(msg: IComponentType<IModel>) {
         logger.info(`Component ${this.name} is publishing a ${msg.type} method`)
         msg.name = this.name
-        this.mediator.notify(msg, this)
+        this.mediator.publish(msg, this)
     };
 
-    recieve(msg: IComponentType<any>) {
+    subscribe(msg: IComponentType<IModel>) {
         logger.info(`Component ${this.name} is subscribing to ${msg.type} method`)
         this.consume(msg)
     };
 
-    consume(msg: IComponentType<any>) {
+    consume(msg: IComponentType<IModel>) {
         switch(msg.type){
             case "create":
                 this.mediator.send_mail(msg.data)
             case "get":
-                this.mediator.send_sms(msg.data.length)
-                this.mediator.convert_csv_toJSON(msg.data.length)
+                this.mediator.send_sms(msg.data)
+                this.mediator.convert_csv_toJSON(msg.data)
             default:
                 this.mediator.print()
         }

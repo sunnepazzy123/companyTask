@@ -11,5 +11,9 @@ export interface IComponentType<T> {
 
 
 export interface IService<T> {
-    mail: (data: T) => void
+    send_mail: (data: T) => void
+    send_sms: (data: T) => void
+    convert_csv_toJSON: (data: T) => void
+    convert_json_toCSV: (data: T) => void
+
 }

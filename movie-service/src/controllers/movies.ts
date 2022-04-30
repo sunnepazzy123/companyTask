@@ -3,7 +3,7 @@ import { Request, Response } from "express"
 import { validationResult } from "express-validator";
 import { Orm } from ".";
 import { OmdpApi } from "../api";
-import { authComponent as component } from "../mediator/setup";
+import { authComponent as component, appComponent  } from "../mediator/setup";
 import { DatabaseError } from "../error/databaseError";
 import { ISubscriber } from "../interfaces/ISubscriber";
 import MoviesModel, { IMovie } from "../model/movieModel";
@@ -23,6 +23,7 @@ export const get = async(req: Request, res: Response)=>{
 export const getId = async(req: Request, res: Response)=>{
     const _id = req.params.id  
     const movie = await Orm.Movies.getId(_id);
+    
     return res.status(200).json(movie);
 }
 

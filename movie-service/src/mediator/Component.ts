@@ -21,11 +21,10 @@ export class Component implements IComponent<IComponentType<any>>{
     consume(msg: IComponentType<any>) {
         switch(msg.type){
             case "create":
-                this.mediator.mail(msg.data)
-                break
+                this.mediator.send_mail(msg.data)
             case "get":
-                this.mediator.print()
-                break
+                this.mediator.send_sms(msg.data.length)
+                this.mediator.convert_csv_toJSON(msg.data.length)
             default:
                 this.mediator.print()
         }

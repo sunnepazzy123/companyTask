@@ -61,3 +61,4 @@
 {"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:32:00"}
 {"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:32:12"}
 {"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: '32' }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-30 02:03:21"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: '32' }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-30 16:07:09"}

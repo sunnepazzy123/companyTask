@@ -16,14 +16,15 @@ const AUTH_SERVICE = process.env.AUTH_SERVICE || 'http://localhost:8888';
 export const get = async (req: Request, res: Response) => {
     const user_id = +req.user.userId;
     const movies = await Orm.Movies.get(user_id);
-    component.publish({ type: "get", data: movies })
+    component.publish({ type: "get", data: movies });
+    // component.unsubscribe(component);
     return res.status(200).json(movies);
 }
 
 export const getId = async (req: Request, res: Response) => {
     const _id = req.params.id
     const movie = await Orm.Movies.getId(_id);
-
+    component.publish({ type: "get", data: movie });
     return res.status(200).json(movie);
 }
 

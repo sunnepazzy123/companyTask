@@ -20,15 +20,22 @@ export class Component implements IComponent<IComponentType<IModel>>{
         this.consume(msg)
     };
 
+    unsubscribe(msg: IComponent<IComponentType<IModel>>) {
+        logger.info(`Component ${this.name} is unsubscribed`)
+    };
+
     consume(msg: IComponentType<IModel>) {
         switch(msg.type){
             case "create":
                 this.mediator.send_mail(msg.data)
+                break
             case "get":
                 this.mediator.send_sms(msg.data)
-                this.mediator.convert_csv_toJSON(msg.data)
+                // this.mediator.convert_csv_toJSON(msg.data)
+                // break
             default:
                 this.mediator.print()
+                
         }
     }
 

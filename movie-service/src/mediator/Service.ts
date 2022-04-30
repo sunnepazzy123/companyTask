@@ -11,11 +11,11 @@ export class Service implements IService<IModel> {
     };
 
     send_mail(data: IModel) {
-        console.log("sending mail is sent successfully ", data)
+        console.log("sending mail is sent successfully ")
     }
 
     send_sms(data: IModel) {
-        console.log("sending sms is sent successfully ", data)
+        console.log("sending sms is sent successfully ")
     }
 
 

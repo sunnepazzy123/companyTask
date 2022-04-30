@@ -28,12 +28,7 @@ export class Mediator extends Service {
                 component.subscribe(msg)
             }
         }
+        logger.info("service is done")
     };
-
-    unregister(_component: IComponent<IComponentType<IModel>>) {
-        logger.info(`Component ${_component.name} is unregister`)
-       this.components =  this.components.filter((component) => component != _component)
-    }
-
     
 }

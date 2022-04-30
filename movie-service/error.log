@@ -11,3 +11,53 @@
 {"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:11:05"}
 {"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:15:49"}
 {"level":"\u001b[31merror\u001b[39m","message":"Limit exceeded","service":"device","timestamp":"2022-03-28 00:16:37"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"NaN\" (type number) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-01 09:07:08"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"NaN\" (type number) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-01 09:07:11"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: NaN }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-01 09:07:45"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: NaN }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-01 09:07:46"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: NaN }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-01 09:08:04"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 09:19:09"}
+{"level":"\u001b[31merror\u001b[39m","message":"connect ECONNREFUSED 127.0.0.1:8888","service":"device","timestamp":"2022-04-01 09:26:18"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cannot read property 'limit' of null","service":"device","timestamp":"2022-04-01 09:27:12"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cannot read property 'limit' of null","service":"device","timestamp":"2022-04-01 09:31:19"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cannot read property 'limit' of null","service":"device","timestamp":"2022-04-01 09:31:29"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cannot read property 'limit' of null","service":"device","timestamp":"2022-04-01 09:34:19"}
+{"level":"\u001b[31merror\u001b[39m","message":"Title:  not found","service":"device","timestamp":"2022-04-01 09:48:49"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:43:10"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:43:13"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:43:38"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:43:47"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:45:04"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:45:12"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 11:45:15"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:04:48"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:04:54"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:04:59"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:05:13"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:21:45"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:22:47"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:22:52"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:22:56"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:23:01"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:23:10"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:23:44"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:02"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:06"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:17"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:22"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:40"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:24:45"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:25:37"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:26:55"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:27:01"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:27:05"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:28:48"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-01 12:53:21"}
+{"level":"\u001b[31merror\u001b[39m","message":"Not authorized, no token","service":"device","timestamp":"2022-04-30 01:11:35"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:14:45"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:15:46"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:16:32"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:29:12"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:32:00"}
+{"level":"\u001b[31merror\u001b[39m","message":"Movie already exist","service":"device","timestamp":"2022-04-30 01:32:12"}
+{"level":"\u001b[31merror\u001b[39m","message":"Cast to ObjectId failed for value \"{ _id: '32' }\" (type Object) at path \"_id\" for model \"movies\"","service":"device","timestamp":"2022-04-30 02:03:21"}

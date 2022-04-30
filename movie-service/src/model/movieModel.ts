@@ -17,12 +17,12 @@ interface IPaginate {
     pages: number;
 }
 
-interface IMovieModel extends mongoose.Model<IMovieDoc, IPaginate> {
+export interface IMovieModel extends mongoose.Model<IMovieDoc> {
     paginate(arr: {}, arr2: any): IPaginate;
 }
 
 
-interface IMovieDoc extends mongoose.Document, IMovie {
+export interface IMovieDoc extends mongoose.Document {
     createdAt?: Date
 }
 

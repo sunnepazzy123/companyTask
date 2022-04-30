@@ -925,3 +925,25 @@
 [34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 04:57:54"}
 [34minfo[39m: Component authComponent is publishing a get method {"service":"device","timestamp":"2022-04-30 04:57:57"}
 [34minfo[39m: Component appComponent is subscribing to get method {"service":"device","timestamp":"2022-04-30 04:57:57"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:00:07"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:00:07"}
+[34minfo[39m: Component authComponent is publishing a get method {"service":"device","timestamp":"2022-04-30 05:00:08"}
+[34minfo[39m: Component appComponent is subscribing to get method {"service":"device","timestamp":"2022-04-30 05:00:08"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:01:38"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:01:38"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:01:42"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:01:42"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:01:54"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:01:54"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:01:58"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:01:58"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:02:07"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:02:07"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:05:31"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:05:31"}
+[34minfo[39m: Component authComponent is publishing a get method {"service":"device","timestamp":"2022-04-30 05:05:54"}
+[34minfo[39m: Component appComponent is subscribing to get method {"service":"device","timestamp":"2022-04-30 05:05:54"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:21:03"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:21:03"}
+[34minfo[39m: MongoDB Connected: localhost {"service":"device","timestamp":"2022-04-30 05:26:23"}
+[34minfo[39m: Server is listening at http://localhost:8889 {"service":"device","timestamp":"2022-04-30 05:26:23"}

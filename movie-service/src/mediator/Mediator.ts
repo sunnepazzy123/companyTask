@@ -12,8 +12,7 @@ export class Mediator extends Service {
 
     static getInstance() {
         if(!this._instance){
-            this._instance = new Mediator()
-            return this._instance
+            this._instance = new Mediator();
         }
         return this._instance
     }

@@ -1,6 +1,7 @@
 export interface IComponent<T> {
     publish: (msg: T) => void,
-    subscribe: (msg: T) => void
+    subscribe: (msg: T) => void,
+    name?: string
 }
 
 export interface IComponentType<T> {

@@ -7,7 +7,7 @@ import { Mediator } from "./Mediator";
 
 export class Component implements IComponent<IComponentType<IModel>>{
     
-    constructor(private mediator: Mediator, private name: string){}
+    constructor(private mediator: Mediator, public name: string){}
 
     publish(msg: IComponentType<IModel>) {
         logger.info(`Component ${this.name} is publishing a ${msg.type} method`)

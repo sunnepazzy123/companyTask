@@ -1,4 +1,5 @@
 
+import logger from "../logger/winston";
 import { IComponent, IComponentType, IModel} from "./interface";
 import { Service } from "./Service";
 
@@ -28,6 +29,11 @@ export class Mediator extends Service {
             }
         }
     };
+
+    unregister(_component: IComponent<IComponentType<IModel>>) {
+        logger.info(`Component ${_component.name} is unregister`)
+       this.components =  this.components.filter((component) => component != _component)
+    }
 
     
 }

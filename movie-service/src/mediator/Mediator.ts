@@ -4,7 +4,9 @@ import { Service } from "./Service";
 
 export class Mediator extends Service {
     static _instance: Mediator = undefined
-    constructor(private components: IComponent<IComponentType<any>>[] = [], private service: IService<IComponentType<any>> = new Service){
+    constructor (
+        private components: IComponent<IComponentType<any>>[] = [], 
+        ) {
         super();
     }
 

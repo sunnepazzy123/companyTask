@@ -1,5 +1,5 @@
 
-# NetGuru Recruitment Task: 
+# Company Recruitment Task: 
     
  I redefined all this services from scratch...
 
